@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Web App - Premium Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-brands fa-spotify"></i>
+                <span>MusicClone</span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</a>
+                <a href="#"><i class="fa-solid fa-lines-leaning"></i> Thư viện</a>
+            </nav>
+            <div class="playlists">
+                <p class="section-title">PLAYLISTS</p>
+                <a href="#"><i class="fa-solid fa-square-plus"></i> Tạo playlist</a>
+                <a href="#"><i class="fa-solid fa-heart"></i> Bài hát đã thích</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-view">
+            <header class="top-nav">
+                <div class="nav-buttons">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="user-profile">
+                    <button class="upgrade-btn">Nâng cấp</button>
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?u=kiet" alt="User">
+                        <span>Kiet Dev</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-body">
+                <div class="banner">
+                    <div class="banner-content">
+                        <span class="badge">PLAYLIST</span>
+                        <h1>Top Hits 2026</h1>
+                        <p>Tuyển tập những bài hát hay nhất của Đen Vâu và các nghệ sĩ Indie.</p>
+                    </div>
+                </div>
+
+                <div class="playlist-container">
+                    <div class="playlist-header">
+                        <div class="play-action">
+                            <button class="play-main"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="tracklist-labels">
+                        <span># TIÊU ĐỀ</span>
+                        <span>NGHỆ SĨ</span>
+                        <span><i class="fa-regular fa-clock"></i></span>
+                    </div>
+                    <div id="result">
+                        <!-- Songs will be rendered here by script.js -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Persistent Player Bar -->
+        <footer class="player-bar player-container">
+            <!-- Left: Current Song Info -->
+            <div class="now-playing">
+                <img id="current-cover" src="" alt="">
+                <div class="song-details">
+                    <h4 id="current-title">Chọn bài hát</h4>
+                    <p id="current-artist">...</p>
+                </div>
+                <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <!-- Center: Playback Controls -->
+            <div class="playback-controls">
+                <div class="control-buttons">
+                    <button class="secondary-btn"><i class="fa-solid fa-shuffle"></i></button>
+                    <button class="secondary-btn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="nut main-play-btn">
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <button class="secondary-btn"><i class="fa-solid fa-forward-step"></i></button>
+                    <button class="secondary-btn"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">00:00</span>
+                    <input type="range" id="progress-bar" min="0" max="100" value="0">
+                    <span id="duration">00:00</span>
+                </div>
+            </div>
+
+            <!-- Right: Volume & Utilities -->
+            <div class="utility-controls">
+                <button class="secondary-btn"><i class="fa-solid fa-microphone"></i></button>
+                <button class="secondary-btn"><i class="fa-solid fa-list"></i></button>
+                <div class="amluong">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input type="range" min="0" max="100" value="50">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
